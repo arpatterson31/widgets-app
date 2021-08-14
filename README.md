@@ -16,11 +16,12 @@ Good practice for using hooks
 
 - Connected to Wikipedia API to allow users to search by topic and will show list of topics
 <!-- - 'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=SEARCHTERM' -->
-- useState, useEffect
+- Good practice for using the following hooks: useState, useEffect
 
 ## Dropdown
 
-- useState, useEffect, useRef
+- Simple dropdown menu for user to select a color. This will be a reusable component 
+- Good practice for using the following hooks: useState, useEffect, useRef
 
 ## Language Translator
 
