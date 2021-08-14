@@ -5,16 +5,19 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   const ref = useRef();
 
   useEffect(() => {
-    document.body.addEventListener(
-      'click',
-      (event) => {
-        if (ref.current.contains(event.target)) {
-          return; // tells the event listener to only return early if click happened in dropdown component.. if it did, do nothing, if not (like maybe user clicked anywhere outside of the dropdown) then setOpen to false to close the dropdown
-        }
-        setOpen(false);
-      },
-      { capture: true }
-    );
+    const onBodyClick = (event) => {
+      if (ref.current.contains(event.target)) {
+        return; // tells the event listener to only return early if click happened in dropdown component.. if it did, do nothing, if not (like maybe user clicked anywhere outside of the dropdown) then setOpen to false to close the dropdown
+      }
+      setOpen(false);
+    };
+    document.body.addEventListener("click", onBodyClick, { capture: true });
+ 
+    return () => {
+      document.body.removeEventListener("click", onBodyClick, {
+        capture: true,
+      });
+    };
   }, []);
 
   const renderedOptions = options.map((option) => {
