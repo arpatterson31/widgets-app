@@ -11,10 +11,10 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
       }
       setOpen(false);
     };
-    document.body.addEventListener("click", onBodyClick, { capture: true });
+    document.body.addEventListener('click', onBodyClick, { capture: true });
  
-    return () => {
-      document.body.removeEventListener("click", onBodyClick, {
+    return () => {  // clean up function on useEffect to remove this event listener when we toggle the dropdown to not show.. this will clear the error from the useRef hook
+      document.body.removeEventListener('click', onBodyClick, {
         capture: true,
       });
     };
