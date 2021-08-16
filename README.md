@@ -20,9 +20,10 @@ Good practice for using hooks
 
 ## Dropdown
 
-- Simple dropdown menu for user to select a color. This will be a reusable component 
+- Simple dropdown menu for user to select a color. This will be a reusable component
 - Good practice for using the following hooks: useState, useEffect, useRef
 
 ## Language Translator
 
-- useState, useEffect, useRef
+- Translate app using the Google Translate API
+- Good practie for using the following hooks: useState, useEffect
