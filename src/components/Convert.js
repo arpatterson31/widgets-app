@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Convert = () => {
+const Convert = ({ language, text }) => {
+  useEffect(() => {
+    console.log('new language or text');
+  }, [language, text])
+
   return (
     <h1>convert</h1>
   );
