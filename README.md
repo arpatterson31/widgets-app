@@ -27,3 +27,7 @@ Good practice for using hooks
 
 - Translate app using the Google Translate API
 - Good practie for using the following hooks: useState, useEffect
+
+## Navigation
+
+- Built from scratch and not relying on React Router
