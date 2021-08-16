@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Dropdown from './Dropdown';
 
 
 const Translate = () => {
   return (
-    <h1>translate</h1>
+    <div>
+      <Dropdown />
+    </div>
   );
 }
 
